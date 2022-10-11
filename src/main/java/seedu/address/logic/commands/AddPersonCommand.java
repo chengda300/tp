@@ -77,13 +77,13 @@ public class AddPersonCommand extends Command {
             InternshipId internshipId,
             Set<Tag> tags,
             Index linkIndex) {
-        requireAllNonNull(name, phone, email, tags, linkIndex);
+        requireAllNonNull(name, phone, email, tags);
         this.name = name;
         this.phone = phone;
         this.email = email;
         this.internshipId = internshipId;
         this.tags.addAll(tags);
-        this.linkIndex = linkIndex;
+        this.linkIndex = null;
     }
 
     @Override
